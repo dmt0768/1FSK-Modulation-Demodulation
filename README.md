@@ -10,6 +10,7 @@ Using devices:
 3) ADC -- onboard.
 
 ## Detailed overview
+In this section, the program algorithm is described. There is only a reduced code necessary for understanding. You could download full code, see the last section.
 
 ### 1. Modulation and sending
 
