@@ -15,7 +15,7 @@ In this section, the program algorithm is described. There is only a reduced cod
 The all code consist of 3 parts: modulation and sending prog., receiving prog. and demodulation prog.
 
 ### 1. Modulation and sending
-The name of described file is "modulator.py"
+The name of described file is *modulator.py*
 
 ### 2. Receiving
 
