@@ -5,7 +5,7 @@ The repository contains Python code to show modulation/demodulation procedures t
 The main purpose of this repository is given information about the basic principles of 1FSK modulation and demodulation. DAC and ADC are used to generate and receive the data signal. These basics may be useful in more serious projects like wireless data transmitting.
 
 Using devices:
-1) BeagleBone Black controller on Debian 9
+1) BeagleBone Black (BBB) platform on Debian 9
 2) DAC -- I2C connected MCP4725 (12-bit, High-Speed Mode available). Arduino shield with MCP4725 is used (https://amperka.ru/product/troyka-dac-screw-terminal)
 3) ADC -- onboard.
 
@@ -32,7 +32,7 @@ import Adafruit_BBIO.GPIO as GPI
 
 *time* is used for time management.
 
-*Adafruit_BBIO* allow program to adjust GPIO lines (and many others).
+*Adafruit_BBIO* allow program to adjust GPIO lines (**This library was developed espesially for BBB**).
 
 ### 2. Receiving
 
