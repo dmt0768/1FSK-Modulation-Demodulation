@@ -61,8 +61,28 @@ N = 8 + 1  # How many bits to send.
 #  One additional bit (+1) is going first and is used as example for decoder algorithm as high level ("one")
 A = max/4 - 10  # Transmitted signal amplitude. Positive voltage DAC and DAC are used
 zero_line = max/2  # See above ("A")
-Fs = 2000  # sampling frequency, must be much more higher than the carrier frequency
+Fs = 2000  # sampling frequency, must be much more higher than the carrier frequency Fc
 ```
+- Input data
+
+- Data processing:
+
+```
+t = np.arange(0, N / Fbit, 1 / Fs)  # time to send all bits
+m = np.zeros(0)
+for bit in data_in:
+    if bit == 0:
+        m = np.hstack((m, np.multiply(np.ones(int(Fs / Fbit)), Fc - Fdev)))
+    else:
+        m = np.hstack((m, np.multiply(np.ones(int(Fs / Fbit)), Fc + Fdev)))
+
+y = np.zeros(0)
+y = A * np.cos(2 * np.pi * np.multiply(m, t)) + zero_line
+```
+
+To undestand the last operations see numpy docs. In 
+
+
 
 ### 2. Receiving
 
