@@ -90,7 +90,7 @@ In the result you will get:
 DAC connected via I2C is used. So I use this interface, and this part of program is very special according to my DAC's I2C protocol.
 Thus I will omit one. Althought, if you are interested in I2C, there is my pepository with full description of this DAC MCP4725 adjusting: https://github.com/dmt0768/Beaglebone-black_I2C-DAC
 
-Here is general infomation about I2C, with has helped me **(but it in Russian)**: http://easyelectronics.ru/interface-bus-iic-i2c.html
+Here is a general infomation about I2C, with has helped me **(but it in Russian)**: http://easyelectronics.ru/interface-bus-iic-i2c.html
 
 
 ### 2. Receiving
