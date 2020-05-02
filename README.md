@@ -128,10 +128,14 @@ time_point = 0  # Used for time delay (seconds)
 f = open(adc_path, 'r')  # Open ADC file
 buf = open('buffer.txt', 'w')  # Name of my buffer
 print('Wait for edge...')
+
 GPIO.wait_for_edge('P8_8', GPIO.BOTH)  # Trigger
+
 while GPIO.input('P8_8'):  # While the GPIO line is high
+
     while time.time() - time_point < ADC_T:  # Time delay
         None
+        
     N = int(f.read())  # Read the ADC's file
     buf.write(str(N) + '\n')  # Write to buffer
     time_point = time.time()
