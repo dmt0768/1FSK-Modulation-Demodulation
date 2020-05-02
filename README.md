@@ -127,7 +127,6 @@ There is nothing special, just reading and writing file each *ADC_T* time
 time_point = 0  # Used for time delay (seconds)
 f = open(adc_path, 'r')  # Open ADC file
 buf = open('buffer.txt', 'w')  # Name of my buffer
-print('Wait for edge...')
 
 GPIO.wait_for_edge('P8_8', GPIO.BOTH)  # Trigger
 
