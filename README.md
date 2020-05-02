@@ -63,7 +63,7 @@ A = max/4 - 10  # Transmitted signal amplitude. Positive voltage DAC and DAC are
 zero_line = max/2  # See above ("A")
 Fs = 2000  # sampling frequency, must be much more higher than the carrier frequency Fc
 ```
-- Input data
+- Manual data input in the variable *data_in*
 
 - Data processing:
 
