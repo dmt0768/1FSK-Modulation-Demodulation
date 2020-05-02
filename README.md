@@ -17,6 +17,15 @@ The all code consist of 3 parts: modulation and sending prog., receiving prog. a
 ### 1. Modulation and sending
 The name of described file is *modulator.py*
 
+Lybraries loading:
+
+```
+from smbus2 import SMBus
+import numpy as np
+import time
+import Adafruit_BBIO.GPIO as GPI
+```
+
 ### 2. Receiving
 
 ### 3. Demodulation
