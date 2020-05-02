@@ -80,7 +80,9 @@ y = np.zeros(0)
 y = A * np.cos(2 * np.pi * np.multiply(m, t)) + zero_line
 ```
 
-To undestand the last operations see numpy docs. In the result you will get:
+To undestand the last operations see the numpy docs: https://numpy.org/doc/ 
+
+In the result you will get:
 ![orig_im](https://github.com/dmt0768/hello-world/blob/master/images/1FSK/2020-05-02_18-53-24.png)
 
 
