@@ -93,6 +93,14 @@ Thus I will omit one. Althought, if you are interested in I2C, there is my pepos
 Here is a general infomation about I2C, with has helped me **(but it in Russian)**: http://easyelectronics.ru/interface-bus-iic-i2c.html
 
 
+There is one thing worthy of attention. I hold on my GPIO line while data is transmitting. This is the trigger for receiver.
+
+```
+GPIO.output('P8_7',GPIO.HIGH)  # Trigger line high
+    ...
+GPIO.output('P8_7', GPIO.LOW)  # Trigger line low
+```
+
 ### 2. Receiving
 
 ### 3. Demodulation
