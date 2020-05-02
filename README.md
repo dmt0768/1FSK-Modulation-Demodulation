@@ -26,6 +26,11 @@ import time
 import Adafruit_BBIO.GPIO as GPI
 ```
 
+*smbus2* is a lybrary to adjust I2C ports.
+*numpy* is needed to processing data
+*time* is used for time management
+*Adafruit_BBIO* allow program to adjust GPIO lines (and many others)
+
 ### 2. Receiving
 
 ### 3. Demodulation
