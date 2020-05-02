@@ -17,7 +17,7 @@ The all code consist of 3 parts: modulation and sending prog., receiving prog. a
 ### 1. Modulation and sending
 The name of described file is *modulator.py*
 
-Lybraries loading:
+- Lybraries loading:
 
 ```
 from smbus2 import SMBus
@@ -33,6 +33,18 @@ import Adafruit_BBIO.GPIO as GPI
 *time* is used for time management.
 
 *Adafruit_BBIO* allow program to adjust GPIO lines (**This library was developed espesially for BBB**).
+
+
+- I2C constants:
+
+```
+chip_adr = 0x63  # This is adress of your DAC chip on the I2C lines
+i2c_folder = '/dev/i2c-2'  # This is forlder of your I2C file
+max = 2000  # Do not increase it while BBB's onboard ADC is used! 2000 -- recomended, 2200 -- LIMIT
+
+DAC_T = 0.002  # This is delay (seconds) beetwen times of data sending to DAC
+```
+
 
 ### 2. Receiving
 
