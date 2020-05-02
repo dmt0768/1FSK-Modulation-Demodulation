@@ -119,11 +119,12 @@ GPIO.setup('P8_8', GPIO.IN)  # GPIO line for triggering this program
 adc_path = '/sys/bus/iio/devices/iio:device0/in_voltage3_raw' # ADC's file path
 ```
 
-- Receiving
+- Receiving:
+
 There is nothing special, just reading and writing file each *ADC_T* time
 
 ```
-time_point = 0  # Used for time delay
+time_point = 0  # Used for time delay (seconds)
 f = open(adc_path, 'r')  # Open ADC file
 buf = open('buffer.txt', 'w')  # Name of my buffer
 print('Wait for edge...')
