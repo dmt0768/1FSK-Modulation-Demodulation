@@ -41,10 +41,28 @@ import Adafruit_BBIO.GPIO as GPI
 chip_adr = 0x63  # This is adress of your DAC chip on the I2C lines
 i2c_folder = '/dev/i2c-2'  # This is forlder of your I2C file
 max = 2000  # Do not increase it while BBB's onboard ADC is used! 2000 -- recomended, 2200 -- LIMIT
-
-DAC_T = 0.002  # This is delay (seconds) beetwen times of data sending to DAC
 ```
 
+- DAC constants:
+
+```
+DAC_T = 0.002  # This is time delay (in seconds) beetwen times of data sending to DAC
+GPIO.setup('P8_7',GPIO.OUT)  # This is a GPIO line holding on while data is transmitting  
+
+```
+
+- Data processing constants:
+
+```
+Fc = 100  # Carrier frequency
+Fbit = 10  # Bitrate of data
+Fdev = 50  # Frequency deviation, make higher than bitrate
+N = 8 + 1  # How many bits to send.
+#  One additional bit (+1) is going first and is used as example for decoder algorithm as high level ("one")
+A = max/4 - 10  # Transmitted signal amplitude. Positive voltage DAC and DAC are used
+zero_line = max/2  # See above ("A")
+Fs = 2000  # sampling frequency, must be much more higher than the carrier frequency
+```
 
 ### 2. Receiving
 
