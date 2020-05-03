@@ -145,3 +145,34 @@ buf.close()
 ```
 
 ### 3. Demodulation
+
+The name of described file is *decoder.py*
+
+- Lybraries loading and constants:
+
+```
+from scipy.signal.signaltools import medfilt
+from scipy.signal.signaltools import hilbert
+```
+
+```
+N = 8 + 1  # Amount of bits
+Fbit = 10  # bitrate
+dur = 1/Fbit * N  # Duration of signal
+```
+
+- Read buffer:
+
+This is just buffer file reading. I'll omit this part.
+
+- Detector:
+
+To debodulate signal I use:
+
+1) Differentila filter,
+2) Hilbert filter,
+30 Median filter.
+
+Their impact you can see here:
+
+![decoder](https://github.com/dmt0768/hello-world/blob/master/images/1FSK/image.png)
