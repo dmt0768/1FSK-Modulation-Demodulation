@@ -225,5 +225,5 @@ numpy v.1.16.6 seems to be сompatible with scipy.
 Download programs from GitHub:
 
 ```
-  git clone https://github.com/dmt0768/Beaglebone-black_I2C-DAC.git
+  git clone https://github.com/dmt0768/1FSK-Modulation-Demodulation.git
 ```
