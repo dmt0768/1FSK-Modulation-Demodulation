@@ -171,7 +171,7 @@ To debodulate signal I use:
 
 1) Differentila filter,
 2) Hilbert filter,
-30 Median filter.
+3) Median filter.
 
 Their impact you can see here:
 
