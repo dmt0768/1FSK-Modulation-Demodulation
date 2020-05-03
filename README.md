@@ -119,17 +119,19 @@ GPIO.setup('P8_8', GPIO.IN)  # GPIO line for triggering this program
 adc_path = '/sys/bus/iio/devices/iio:device0/in_voltage3_raw' # ADC's file path
 ```
 
-- Receiving:
-
-There is nothing special, just reading and writing file each *ADC_T* time
+- Prepearing and triggering:
 
 ```
 time_point = 0  # Used for time delay (seconds)
 f = open(adc_path, 'r')  # Open ADC file
 buf = open('buffer.txt', 'w')  # Name of my buffer
 
-GPIO.wait_for_edge('P8_8', GPIO.BOTH)  # Trigger
+GPIO.wait_for_edge('P8_8', GPIO.BOTH)  # Trigger for edge on GPIO line
+```
 
+Next there is nothing special, just reading and writing file each *ADC_T* time
+
+```
 while GPIO.input('P8_8'):  # While the GPIO line is high
 
     while time.time() - time_point < ADC_T:  # Time delay
@@ -176,3 +178,29 @@ To debodulate signal I use:
 Their impact you can see here:
 
 ![decoder](https://github.com/dmt0768/hello-world/blob/master/images/1FSK/image.png)
+
+Here is code of filters:
+
+```
+y_diff = np.diff(y,1)  # differetiator
+y_env = np.abs(hilbert(y_diff))  # Hilbet's filter
+m_w = int(len(y)/30)  # Median filter's window
+y_filtered = medfilt(y_env, m_w + (m_w+1) % 2)   # Median filter
+y_filtered = y_filtered / max(y_filtered)  # Signal normalization for high and low detecting
+```
+
+- High and low level detecting:
+
+The first bit of signal is always "one". It is used as example for decoder algorithm as high level ("one")
+
+```
+code = list()
+for i in range(0,N):
+    if y_filtered[ int( (1/(2*Fbit) + i/Fbit) / (dur/len(y)) ) ] >= 0.8:
+        code.append(1)  # High level
+    elif y_filtered[ int( (1/(2*Fbit) + i/Fbit) / (dur/len(y)) ) ] <= 0.6:
+        code.append(0)  # low level
+    else:
+        code.append('?')  # Undetected
+print(*code[1:])
+```
