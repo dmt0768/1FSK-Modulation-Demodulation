@@ -206,3 +206,24 @@ print(*code[1:])
 ```
 
 ## Download
+For the first of all you should update your pip:
+
+```
+  pip3 install --upgrade pip
+```
+
+Then install python packeges:
+
+```
+pip3 install smbus2
+pip3 install Adafruit_BBIO
+pip3 install numpy==1.16.6
+pip3 install scipy
+```
+numpy v.1.16.6 seems to be сompatible with scipy.
+
+Download programs from GitHub:
+
+```
+  git clone https://github.com/dmt0768/Beaglebone-black_I2C-DAC.git
+```
