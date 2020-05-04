@@ -12,7 +12,7 @@ Using devices:
 ## Detailed overview
 In this section, the program algorithm is described. There is only a reduced code necessary for understanding. You could download full code, see the last section.
 
-All code consists of 3 parts: modulation and sending prog., receiving prog. and demodulation prog.
+All code consists of 3 parts: modulation and sending program, receiving program and demodulation program.
 
 ### 1. Modulation and sending
 The name of the described file is *modulator.py*
