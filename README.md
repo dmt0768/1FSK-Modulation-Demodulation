@@ -46,7 +46,7 @@ max = 2000  # Do not increase it while BBB's onboard ADC is used! 2000 -- recomm
 - DAC constants:
 
 ```
-DAC_T = 0.002  # This is a time delay (in seconds) between times of data sending to DAC
+DAC_T = 0.005  # This is a time delay (in seconds) between times of data sending to DAC
 GPIO.setup('P8_7',GPIO.OUT)  # A GPIO line is holded on while data is transmitting  
 
 ```
@@ -196,9 +196,9 @@ The first bit of signal is always "one". It is used an example for decoder algor
 ```
 code = list()
 for i in range(0,N):
-    if y_filtered[ int( (1/(2*Fbit) + i/Fbit) / (dur/len(y)) ) ] >= 0.8:
+    if y_filtered[ int( (1/(2*Fbit) + i/Fbit) / (dur/len(y)) ) ] >= 0.75:
         code.append(1)  # High level
-    elif y_filtered[ int( (1/(2*Fbit) + i/Fbit) / (dur/len(y)) ) ] <= 0.6:
+    elif y_filtered[ int( (1/(2*Fbit) + i/Fbit) / (dur/len(y)) ) ] <= 0.55:
         code.append(0)  # low level
     else:
         code.append('?')  # Undetected
