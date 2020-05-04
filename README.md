@@ -153,6 +153,7 @@ The name of the described file is *decoder.py*
 - Libraries loading and constants:
 
 ```
+import numpy as np
 from scipy.signal.signaltools import medfilt
 from scipy.signal.signaltools import hilbert
 ```
