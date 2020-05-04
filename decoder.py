@@ -2,11 +2,7 @@
 
 print('Program is started')
 
-try:
-    import numpy as np
-    from scipy.signal.signaltools import medfilt
-    from scipy.signal.signaltools import hilbert
-except ImportError: None
+import numpy as np
 from scipy.signal.signaltools import medfilt
 from scipy.signal.signaltools import hilbert
 
