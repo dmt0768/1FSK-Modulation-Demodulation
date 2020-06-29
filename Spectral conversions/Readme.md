@@ -170,21 +170,35 @@ To demodulate  signal I use:
 
 - original spectrum:
 
+
 ![original spectrum](https://github.com/dmt0768/hello-world/blob/master/images/1FSK/orig%20spec.png)
 
 
-- multiplied spectrum: ![multiplied spectrum](https://github.com/dmt0768/hello-world/blob/master/images/1FSK/doubled%20spec.png)
+- multiplied spectrum:
+
+
+![multiplied spectrum](https://github.com/dmt0768/hello-world/blob/master/images/1FSK/doubled%20spec.png)
 
 
 2) Low-frequency pass filter,
 
-- filtered specrtum: ![filtered spectrum](https://github.com/dmt0768/hello-world/blob/master/images/1FSK/filtered%20spec.png)
+- filtered specrtum: 
+
+![filtered spectrum](https://github.com/dmt0768/hello-world/blob/master/images/1FSK/filtered%20spec.png)
+
 
 3) arctan2 function.
 
-- angle: ![angle](https://github.com/dmt0768/hello-world/blob/master/images/1FSK/angle.png)
+- angle: 
 
-- calculated result: - angle: ![result](https://github.com/dmt0768/hello-world/blob/master/images/1FSK/signal.png)
+
+![angle](https://github.com/dmt0768/hello-world/blob/master/images/1FSK/angle.png)
+
+
+- calculated result: - angle:
+
+
+![result](https://github.com/dmt0768/hello-world/blob/master/images/1FSK/signal.png)
 
 
 Here is the code of filters:
