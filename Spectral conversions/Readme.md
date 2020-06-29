@@ -195,7 +195,9 @@ To demodulate  signal I use:
 ![angle](https://github.com/dmt0768/hello-world/blob/master/images/1FSK/angle.png)
 
 
-- calculated result: - angle:
+- calculated result:
+
+- angle:
 
 
 ![result](https://github.com/dmt0768/hello-world/blob/master/images/1FSK/signal.png)
