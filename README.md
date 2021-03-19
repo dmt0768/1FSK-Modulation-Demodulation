@@ -10,7 +10,7 @@ Using devices:
 3) ADC -- onboard.
 
 There are two sections with two different demodulation algorithm:
-1) Algorithm with spectral math conversions (more appropriate) (https://github.com/dmt0768/1FSK-Modulation-Demodulation/tree/new/Сonversions%20in%20the%20time%20domain)
-2) Algorithm with conversions in the time domain (https://github.com/dmt0768/1FSK-Modulation-Demodulation/tree/new/Spectral%20conversions)
+1) Algorithm with spectral math conversions (more appropriate) (https://github.com/dmt0768/1FSK-Modulation-Demodulation/tree/master/Spectral%20conversions)
+2) Algorithm with conversions in the time domain (https://github.com/dmt0768/1FSK-Modulation-Demodulation/tree/master/Сonversions%20in%20the%20time%20domain)
 
 Open folders to see the repositories.
